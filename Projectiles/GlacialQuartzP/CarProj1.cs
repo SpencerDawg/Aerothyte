@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 using static Aerothyte.AerothytePlayer;
 using Aerothyte;
 using System;
+using Terraria.Audio;
 
 namespace Aerothyte.Projectiles.GlacialQuartzP
 {
@@ -38,7 +39,7 @@ namespace Aerothyte.Projectiles.GlacialQuartzP
         public override void Kill(int timeLeft)
         {
             int SpawnedIcicles = Main.rand.Next(2, 4);
-            Main.PlaySound(SoundID.Shatter, projectile.position);
+            SoundEngine.PlaySound(SoundID.Shatter, projectile.position);
             for (int i = 0; i < 20; i++)
             {
                 Dust.NewDustDirect(projectile.Center, projectile.width, projectile.height, 20, default, default, 200, Color.Blue, 2.5f);

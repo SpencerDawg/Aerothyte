@@ -5,6 +5,8 @@ using Microsoft.Xna.Framework;
 using System.Threading;
 using System;
 using Terraria.Localization;
+using Terraria.GameContent.NetModules;
+using Terraria.Chat;
 
 namespace Aerothyte
 {
@@ -25,6 +27,8 @@ namespace Aerothyte
 		}
 		public static bool Debug => false;
 		public static readonly int GlacialQuartzRarityID = 21;
+		// TODO: Fix Custom Rarity
+		//public object[] ListOfTerrariaSpriteFonts;
 		public Aerothyte()
 		{
 			
@@ -34,7 +38,6 @@ namespace Aerothyte
 		public override void Load()
 		{
 			AerothyteON.HookMethod();
-			Mod calamityInstance = ModLoader.GetMod("CalamityMod");
 			
 		}
 		// TODO: Timers
@@ -51,7 +54,7 @@ namespace Aerothyte
 		
 			if (Main.netMode == NetmodeID.Server)
 			{
-				NetMessage.BroadcastChatMessage(NetworkText.FromLiteral(Message), color);
+				ChatHelper.BroadcastChatMessage(NetworkText.FromLiteral(Message), color);
 			}
 		}
 		#endregion

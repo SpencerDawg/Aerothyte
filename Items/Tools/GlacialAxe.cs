@@ -17,7 +17,7 @@ namespace Aerothyte.Items.Tools
             item.width = 32;
             item.height = 32;
             item.damage = 10;
-            item.useStyle = ItemUseStyleID.SwingThrow;
+            item.useStyle = ItemUseStyleID.Swing;
             item.useAnimation = 20;
             item.useTime = 20;
             item.pick = 20;

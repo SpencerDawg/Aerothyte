@@ -23,7 +23,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
             item.useTime = 15;
             item.noMelee = true;
             item.useAnimation = 15;
-            item.useStyle = ItemUseStyleID.HoldingOut;
+            item.useStyle = ItemUseStyleID.Swing;
             item.shoot = ModContent.ProjectileType<CarProj1>();
 
         }

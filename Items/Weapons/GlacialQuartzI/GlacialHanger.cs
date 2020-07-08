@@ -6,6 +6,8 @@ using Terraria.ModLoader;
 using static Aerothyte.AerothytePlayer;
 using Aerothyte;
 using Microsoft.Xna.Framework.Graphics;
+using Terraria.IO;
+using Terraria.Audio;
 
 namespace Aerothyte.Items.Weapons.GlacialQuartzI
 {
@@ -23,7 +25,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
             item.autoReuse = true;
             item.useTime = 20;
             item.useAnimation = 20;
-            item.useStyle = ItemUseStyleID.SwingThrow;
+            item.useStyle = ItemUseStyleID.Swing;
         }
         public override void SetStaticDefaults()
         {
@@ -36,7 +38,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
             if (player.altFunctionUse == 2)
             {
                 broken = true;
-                Main.PlaySound(SoundID.Shatter);
+                SoundEngine.PlaySound(SoundID.Shatter);
                 player.velocity.Y = 0;
                 player.velocity.Y -= 10;
                 for (int i = 0; i < 20; i++)
@@ -72,7 +74,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
         {
             if (broken)
             {
-                AerothyteItem.DrawAsInactive(Color.DarkSlateBlue * counter, ModContent.GetTexture(Texture), position, frame, scale, origin);
+                AerothyteItem.DrawAsInactive(Color.DarkSlateBlue * counter, ModContent.GetTexture(Texture).Value, position, frame, scale, origin);
             }
         }
     }

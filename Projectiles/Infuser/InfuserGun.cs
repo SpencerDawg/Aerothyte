@@ -10,6 +10,7 @@ using System;
 using Terraria.Audio;
 using Aerothyte.Sounds;
 using Microsoft.Xna.Framework.Graphics;
+using Terraria.GameContent;
 
 namespace Aerothyte.Projectiles.Infuser
 {
@@ -37,12 +38,12 @@ namespace Aerothyte.Projectiles.Infuser
         public override bool PreDraw(SpriteBatch spriteBatch, Color lightColor)
         {
             SpriteEffects spriteEffects = SpriteEffects.None;
-            Texture2D texture = Main.projectileTexture[projectile.type];
+            Texture2D texture = ModContent.GetTexture(Texture).Value;
             Rectangle sourceRectangle = new Rectangle(0, 0, texture.Width, texture.Height);
             Vector2 origin = sourceRectangle.Size() / 2f;
 
             Color drawColor = projectile.GetAlpha(lightColor);
-            Main.spriteBatch.Draw(texture, Main.player[projectile.owner].Center + new Vector2((Main.player[projectile.owner].direction * 15), 0) - Main.screenPosition + new Vector2(0f, projectile.gfxOffY), sourceRectangle, drawColor, projectile.rotation, origin, 1, spriteEffects, 0f);
+            Main.spriteBatch.Draw(ModContent.GetTexture(Texture).Value, Main.player[projectile.owner].Center + new Vector2((Main.player[projectile.owner].direction * 15), 0) - Main.screenPosition + new Vector2(0f, projectile.gfxOffY), sourceRectangle, drawColor, projectile.rotation, origin, 1, spriteEffects, 0f);
 
             return false;
         }
@@ -110,7 +111,7 @@ namespace Aerothyte.Projectiles.Infuser
             {
                 if(projectile.owner == Main.myPlayer) Projectile.NewProjectile(player.Center, projectile.DirectionTo(target.Center) * 20, ProjectileID.WaterBolt, 40, 5, projectile.owner);
                 player.statMana -= 50;
-                Main.PlaySound(SoundLoader.customSoundType, -1, -1, mod.GetSoundSlot(Terraria.ModLoader.SoundType.Custom, "Sounds/InfuserS"));
+                Terraria.Audio.SoundEngine.PlaySound(SoundLoader.customSoundType, -1, -1, mod.GetSoundSlot(Terraria.ModLoader.SoundType.Custom, "Sounds/InfuserS"));
                 counter = 0;
                 CalledOut = false;
             }

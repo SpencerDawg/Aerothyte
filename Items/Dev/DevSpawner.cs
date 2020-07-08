@@ -15,7 +15,7 @@ namespace Aerothyte.Items.Dev
         {
             item.height = 16;
             item.width = 16;
-            item.useStyle = ItemUseStyleID.SwingThrow;
+            item.useStyle = ItemUseStyleID.Swing;
             item.noMelee = true;
         }
         public override bool UseItem(Player player)

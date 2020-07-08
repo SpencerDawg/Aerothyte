@@ -3,8 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ID;
 using static Terraria.ModLoader.ModContent;
-using Terraria.World;
-using Terraria.World.Generation;
+using static Terraria.World;
 using Terraria.ModLoader.IO;
 
 namespace Aerothyte
@@ -27,9 +26,9 @@ namespace Aerothyte
         {
             
         }
-        public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
+        public override void ModifyWorldGenTasks(List<Terraria.WorldBuilding.GenPass> tasks, ref float totalWeight)
         {
-            
+            base.ModifyWorldGenTasks(tasks, ref totalWeight);
         }
         public override void TileCountsAvailable(int[] tileCounts)
         {

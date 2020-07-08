@@ -29,7 +29,7 @@ namespace Aerothyte
         public static void HookMethod()
         {
             On.Terraria.Player.PickTile += CustomTilePick;
-            On.Terraria.Main.MouseText += CustomTooltips;
+            //On.Terraria.Main.MouseText += CustomTooltips;
             //get itemtext fixed here eventually
         }
 
@@ -51,8 +51,8 @@ namespace Aerothyte
             }
             if (rare == Aerothyte.GlacialQuartzRarityID)
             {
-
-                ChatManager.DrawColorCodedStringWithShadow(Terraria.Main.spriteBatch, Terraria.Main.fontMouseText, cursorText, new Vector2(X2, Y2), AerothyteColor.RarityGQ, 0f, Vector2.Zero, Vector2.One);
+                // TODO: Fix Custom Rarity Pt. 2
+                //ChatManager.DrawColorCodedStringWithShadow(Terraria.Main.spriteBatch, Terraria.GameContent.FontAssets.MouseText<>.Value, cursorText, new Vector2(X2, Y2), AerothyteColor.RarityGQ, 0f, Vector2.Zero, Vector2.One);
             }
         }
 
