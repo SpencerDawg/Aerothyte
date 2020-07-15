@@ -30,29 +30,19 @@ namespace Aerothyte
         {
             On.Terraria.Player.PickTile += CustomTilePick;
             //On.Terraria.Main.MouseText += CustomTooltips;
+            On.Terraria.Main.MouseText_DrawItemTooltip += Main_MouseText_DrawItemTooltip;
             //get itemtext fixed here eventually
         }
 
-        private static void CustomTooltips(On.Terraria.Main.orig_MouseText orig, Terraria.Main self, string cursorText, int rare, byte diff, int hackedMouseX, int hackedMouseY, int hackedScreenWidth, int hackedScreenHeight)
+        private static void Main_MouseText_DrawItemTooltip(On.Terraria.Main.orig_MouseText_DrawItemTooltip orig, Terraria.Main self, int rare, byte diff, int X, int Y)
         {
-            orig.Invoke(self, cursorText, rare, diff, hackedMouseX, hackedMouseY, hackedScreenWidth, hackedScreenHeight);
+            orig.Invoke(self, rare, diff, X, Y);
             int X2 = Terraria.Main.mouseX + 10;
             int Y2 = Terraria.Main.mouseY + 10;
-            if (hackedMouseX != -1 && hackedMouseY != -1)
-            {
-                X2 = hackedMouseX + 10;
-                Y2 = hackedMouseY + 10;
-            }
-
-            if (Terraria.Main.ThickMouse)
-            {
-                X2 += 6;
-                Y2 += 6;
-            }
             if (rare == Aerothyte.GlacialQuartzRarityID)
             {
                 // TODO: Fix Custom Rarity Pt. 2
-                //ChatManager.DrawColorCodedStringWithShadow(Terraria.Main.spriteBatch, Terraria.GameContent.FontAssets.MouseText<>.Value, cursorText, new Vector2(X2, Y2), AerothyteColor.RarityGQ, 0f, Vector2.Zero, Vector2.One);
+                ChatManager.DrawColorCodedStringWithShadow(Terraria.Main.spriteBatch, Terraria.GameContent.FontAssets.MouseText.Value, cursorText, new Vector2(X2, Y2), AerothyteColor.RarityGQ, 0f, Vector2.Zero, Vector2.One);
             }
         }
 

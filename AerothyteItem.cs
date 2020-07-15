@@ -59,10 +59,10 @@ namespace Aerothyte
                 }
 
             }
-            item.RebuildTooltip();
         }
         public override void SetDefaults(Item item)
         {
+
         }
         public static void DrawAsInactive(Color color, Texture2D texture, Vector2 position, Rectangle frame, float scale, Vector2 origin)
         {
