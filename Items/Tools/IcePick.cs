@@ -28,9 +28,10 @@ namespace Aerothyte.Items.Tools
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Ice Pick");
-            Tooltip.SetDefault("Once featured in uh.. [c/F36b09:Quarter Life 2], or something.");
+            Tooltip.SetDefault("Once featured in uh.. [c/F36b09:Quarter Life 2, Epistle 3], or something.");
          
         }
+        // now irrelevant due to me learning how on.terraria works, for any future devs
         /**public override bool UseItem(Player player)
         {
             Vector2 tilepos = new Vector2((float)Math.Floor(Main.MouseWorld.X * 16), (float)Math.Floor(Main.MouseWorld.Y * 16));

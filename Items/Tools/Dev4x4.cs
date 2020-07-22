@@ -24,7 +24,6 @@ namespace Aerothyte.Items.Tools
             item.useAnimation = 20;
             item.useTime = 20;
             item.pick = 20;
-
         }
         public override void SetStaticDefaults()
         {

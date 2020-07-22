@@ -47,7 +47,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
                 }
                 for (int i = 0; i < 4; i++)
                 {
-                    Projectile.NewProjectile(player.Center, player.DirectionTo(Main.MouseWorld).RotatedByRandom(MathHelper.ToRadians(30f)) * Main.rand.Next(4, 7), mod.ProjectileType("GlacialHanger" + i), 10, 5, player.whoAmI);
+                    Projectile.NewProjectile(player.Center, player.DirectionTo(Main.MouseWorld).RotatedByRandom(MathHelper.ToRadians(30f)) * Main.rand.Next(4, 7), Mod.ProjectileType("GlacialHanger" + i), 10, 5, player.whoAmI);
                 }
             }
             return true;

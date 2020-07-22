@@ -38,7 +38,6 @@ namespace Aerothyte
 		public override void Load()
 		{
 			AerothyteON.HookMethod();
-			
 		}
 		// TODO: Timers
 
