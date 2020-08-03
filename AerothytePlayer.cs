@@ -20,7 +20,6 @@ namespace Aerothyte
         public static bool DebugPlayer = true;
         public int counter;
         private int i = 0;
-        int amihigh = 100;
         
         public override void ResetEffects()
         {

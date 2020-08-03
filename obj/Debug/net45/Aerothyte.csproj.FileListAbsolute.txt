@@ -1,0 +1,4 @@
+C:\Users\dreit\Documents\My Games\Terraria\ModLoader\Beta\Mod Sources\Aerothyte\obj\Debug\net45\Aerothyte.csprojAssemblyReference.cache
+C:\Users\dreit\Documents\My Games\Terraria\ModLoader\Beta\Mod Sources\Aerothyte\obj\Debug\net45\Aerothyte.csproj.CoreCompileInputs.cache
+C:\Users\dreit\Documents\My Games\Terraria\ModLoader\Beta\Mod Sources\Aerothyte\obj\Debug\net45\Aerothyte.AssemblyInfoInputs.cache
+C:\Users\dreit\Documents\My Games\Terraria\ModLoader\Beta\Mod Sources\Aerothyte\obj\Debug\net45\Aerothyte.AssemblyInfo.cs

@@ -35,6 +35,7 @@ namespace Aerothyte
     }
     public class AerothyteWorld : ModWorld
     {
+        /**
         TagCompound savedata = new TagCompound();
         SaltwaterMineInfo worldSaltwaterMineInfo;
         public override TagCompound Save()
@@ -80,5 +81,6 @@ namespace Aerothyte
             }
         }
         #endregion
+    **/
     }
 }
