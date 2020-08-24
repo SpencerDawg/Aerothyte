@@ -35,18 +35,10 @@ namespace Aerothyte.Projectiles.GlacialQuartzP {
             DisplayName.SetDefault("Blue Balls");
         }
         public override void AI() {
-            for (int i = 0; i < 1; i++) {
-                float position = projectile.position.X + (float)Math.Tan(i);
-                float position2 = projectile.position.Y + (float)Math.Sin(i);
-                Dust.NewDustDirect(new Vector2(position, position2), projectile.width, projectile.height, DustID.IceTorch);
-            }
+
         }
         public override void Kill(int timeLeft) {
-            for (int i = 0; i < 32; i++) {
-                float position = projectile.position.X + (float)Math.Tan(i);
-                float position2 = projectile.position.Y + (float)Math.Sin(i);
-                Dust.NewDust(new Vector2(position, position2), projectile.width, projectile.height, DustID.Fireworks);
-            }
+
         }
     }
 }

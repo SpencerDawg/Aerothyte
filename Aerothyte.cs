@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using System;
 using Terraria;
 using Terraria.Chat;
 using Terraria.ID;
@@ -23,9 +24,9 @@ namespace Aerothyte {
 		// TODO: Fix Custom Rarity
 		//public object[] ListOfTerrariaSpriteFonts;
 		public Aerothyte() {
-
 			// reserves memory
 			// leave here if you're editing
+			Item item = new Item();
 		}
 		public override void Load() {
 			AerothyteON.HookMethod();
@@ -51,13 +52,15 @@ namespace Aerothyte {
 	}
 	#region Tile Methods
 	public class AerothyteTileMethods : GlobalTile {
-		public static void BreakMultiplePlus(Vector2 position) {
+        public static void BreakMultiplePlus(Vector2 position) {
 
 		}
 	}
 	#endregion
 	#region NPC
 	public class AerothyteNPC : GlobalNPC {
+		public override void AI(NPC npc) {
+		}
 	}
 	#endregion
 }

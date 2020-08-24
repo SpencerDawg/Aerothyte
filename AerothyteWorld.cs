@@ -8,6 +8,7 @@ using Terraria.ModLoader.IO;
 using Microsoft.Xna.Framework;
 using Terraria.WorldBuilding;
 using System;
+using System.Threading.Tasks;
 
 namespace Aerothyte
 {
@@ -33,8 +34,10 @@ namespace Aerothyte
             Hardmode = hard;
         }
     }
-    public class AerothyteWorld : ModWorld
+    public partial class AerothyteWorld : ModWorld
     {
+        public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight) {
+        }
         /**
         TagCompound savedata = new TagCompound();
         SaltwaterMineInfo worldSaltwaterMineInfo;

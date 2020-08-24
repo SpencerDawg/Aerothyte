@@ -12,6 +12,7 @@ namespace Aerothyte.Items.Weapons.GlacialQuartzI
 {
     public class DeepFreezer : ModItem
     {
+        
         public override void SetDefaults()
         {
             // set width and height
