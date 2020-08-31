@@ -69,9 +69,11 @@ namespace Aerothyte
             Main.spriteBatch.Draw(texture, position, frame, color, 0f, origin, scale, SpriteEffects.None, 0f);
         }
     }
-    public static class AerothyteColor
+    public class AerothyteColor
     {
-        public static Color RarityGQ => new Color(27, 243, 255);
+        public Color TitleColor = new Color(111, 179, 100);
+        public Color RarityGQ = new Color(27, 243, 255);
+        public static AerothyteColor GetAerothyteColor() => new AerothyteColor();
     }
 }
 

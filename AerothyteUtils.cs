@@ -7,7 +7,7 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Aerothyte;
-
+using Aerothyte.Templates;
 
 namespace Aerothyte {
     public static class AerothyteUtils {
@@ -31,8 +31,13 @@ namespace Aerothyte {
         public static ref Player GetOwner(this Projectile proj) {
             return ref Main.player[proj.owner];
         }
-        
+
         // -- //
+        #endregion
+        #region Item Related
+        public static EvokerItem EGI(this Item i) {
+            return i.GetGlobalItem<EvokerItem>();
+        }
         #endregion
     }
 }

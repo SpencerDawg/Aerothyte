@@ -1,3 +1,5 @@
 displayName = Aerothyte
 author = Aerothyte Team
 version = 0.1
+hideCode = true
+includePDB = true

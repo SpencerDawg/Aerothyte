@@ -9,6 +9,7 @@ using Terraria.ID;
 using System.Diagnostics;
 using Microsoft.Xna.Framework;
 using Aerothyte.Projectiles.Infuser;
+using Aerothyte.Items;
 
 namespace Aerothyte
 {
@@ -20,7 +21,14 @@ namespace Aerothyte
         public static bool DebugPlayer = true;
         public int counter;
         private int i = 0;
-        
+        public override void SetupStartInventory(IList<Item> items, bool mediumcoreDeath) {
+            if(!mediumcoreDeath) {
+                Item note = new Item();
+                note.SetDefaults(ModContent.ItemType<NoteToPlayer>());
+                note.stack = 1;
+                items.Add(note);
+            }
+        }
         public override void ResetEffects()
         {
             InfuserEquip = false;
