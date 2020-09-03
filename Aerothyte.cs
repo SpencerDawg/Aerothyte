@@ -9,6 +9,8 @@ using Terraria.ModLoader;
 namespace Aerothyte {
 	public class Aerothyte : Mod {
 		public static AerothyteColor aeroColorInstance;
+		public static Aerothyte instance;
+		
 		public enum ModState {
 			Testing,
 			Public,
@@ -30,10 +32,12 @@ namespace Aerothyte {
 		}
 		public override void Load() {
 			AerothyteON.HookMethod();
+			instance = new Aerothyte();
 			aeroColorInstance = AerothyteColor.GetAerothyteColor();
 		}
 		public override void Unload() {
 			aeroColorInstance = null;
+			instance = null;
 			//Null every static object.
 		}
 		// TODO: Timers

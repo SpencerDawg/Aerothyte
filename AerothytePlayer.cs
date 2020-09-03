@@ -37,7 +37,15 @@ namespace Aerothyte
         public override void UpdateEquips(ref bool wallSpeedBuff, ref bool tileSpeedBuff, ref bool tileRangeBuff)
         {
             // infuser - see projectiles/infuser and items/accessories/infuser
-            if (InfuserEquip == true && !InfuserActive && player.ownedProjectileCounts[ModContent.ProjectileType<GunMount>()] < 1) { Projectile.NewProjectile(player.position, Vector2.Zero, ModContent.ProjectileType<GunMount>(), 0, 0, player.whoAmI); InfuserActive = true; }
+            if (InfuserEquip == true && !InfuserActive && player.ownedProjectileCounts[ModContent.ProjectileType<GunMount>()] < 1) { 
+                Projectile.NewProjectile(player.position,
+                    Vector2.Zero,
+                    ModContent.ProjectileType<GunMount>(),
+                    0,
+                    0,
+                    player.whoAmI);
+                InfuserActive = true; 
+            }
             if (i == 300) { i = 0; Main.NewText(InfuserEquip + ", " + InfuserActive); }
         }
     }

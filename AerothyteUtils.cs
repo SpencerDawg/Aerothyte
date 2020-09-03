@@ -8,6 +8,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Aerothyte;
 using Aerothyte.Templates;
+using Microsoft.Xna.Framework;
 
 namespace Aerothyte {
     public static class AerothyteUtils {
@@ -38,6 +39,13 @@ namespace Aerothyte {
         public static EvokerItem EGI(this Item i) {
             return i.GetGlobalItem<EvokerItem>();
         }
+        public static TooltipLine NewToolTip(int Number, string Tooltip) => new TooltipLine(Aerothyte.instance, $"AeroTT{Number}", Tooltip);
+        public static TooltipLine NewToolTip(int Number, string Tooltip, Color c) {
+            TooltipLine t = new TooltipLine(Aerothyte.instance, $"AeroTT{Number}", Tooltip);
+            t.overrideColor = c;
+            return t;
+        }
+
         #endregion
     }
 }

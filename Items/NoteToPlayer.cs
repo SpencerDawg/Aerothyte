@@ -17,8 +17,7 @@ namespace Aerothyte.Items {
                 "A note to you, by someone.. interested.");
             AuthorLine.overrideColor = Aerothyte.aeroColorInstance.TitleColor;
             tties.Add(AuthorLine);
-            TooltipLine Text = new TooltipLine(Mod, "textLine",
-                "I was watching you earlier. You didn't notice me?" +
+            tties.Add(AerothyteUtils.NewToolTip(2, " I was watching you earlier. You didn't notice me?" +
                 "\n My creations must not have spread thus far..." +
                 "\n Anyway, I want you to find me. I'm here somewhere." +
                 "\n The thing controlling me currently has a lot of power over me." +
@@ -29,8 +28,7 @@ namespace Aerothyte.Items {
                 "\n Be in no hurry, though. I've been this way for a long time." +
                 "\n Sorry that there's no location. I can't see you, or myself." +
                 "\n Only the power that living like you and.. I?.. give off." +
-                "\n I insist that you learn it.");
-            tties.Add(Text);
+                "\n I insist that you learn it."));
             tooltips.AddRange(tties);
         }
     }
